@@ -1,0 +1,8 @@
+<div *ngIf="animal">
+  <h2>Details about {{animal.name}}</h2>
+  <p>Pet type: {{animal.type}}</p>
+  <p>Description: {{animal.description}}</p>
+  <p>Skills: {{animal.skillOne}}, {{animal.skillTwo}}, {{animal.skillThree}}</p>
+</div>
+<button (click) = "cancel(animal._id)">Cancel</button>
+<button (click) = "delete(animal._id)">Adopt</button>

@@ -1,0 +1,26 @@
+<div *ngIf="animal">
+  <form  (submit)="update(animal._id)">
+    <input type="text" name="animal.name" [(ngModel)]="animal.name" placeholder="name">
+    <p *ngIf="errors.name"> {{errors.name.message}}</p>
+    <br>
+    <input type="text" name="animal.type" [(ngModel)]="animal.type" placeholder="type">
+    <p *ngIf="errors.type"> {{errors.type.message}}</p>
+    <br>
+    <textarea name="animal.description" [(ngModel)]="animal.description" rows=5 cols=50></textarea>
+    <p *ngIf="errors.description"> {{errors.description.message}}</p>
+    <br>
+    <input type="text" name="animal.skillOne" [(ngModel)]="animal.skillOne" placeholder="skillOne">
+    <p *ngIf="errors.skillOne"> {{errors.skillOne.message}}</p>
+    <br>
+    <input type="text" name="animal.skillTwo" [(ngModel)]="animal.skillTwo" placeholder="skillTwo">
+    <p *ngIf="errors.skillTwo"> {{errors.skillTwo.message}}</p>
+    <br>
+    <input type="text" name="animal.skillThree" [(ngModel)]="animal.skillThree" placeholder="skillThree">
+    <p *ngIf="errors.skillThree"> {{errors.skillThree.message}}</p>
+    <br>
+    <input type="submit" value="Edit Pet"/>
+    
+    <button (click) = "delete(animal._id)">Delete</button>
+    <button (click) = "cancel(animal._id)">Cancel</button>
+  </form>
+</div>
